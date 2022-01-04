@@ -5,6 +5,7 @@ function StudentInfo(props){
         <div>
             <center>
                 <h1><underline> Student Details</underline> </h1>
+                <hr/>
                 <h2>Student Name: {props.stdName}</h2>
                 <h2>Student Program: {props.stdProgram}</h2>
                 <h2>Student Age: {props.stdAge}</h2>
