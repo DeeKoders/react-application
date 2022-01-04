@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import StudentInfo from './studentInfo';
+
 
 function App() {
   return (
-    <div>
-      <h1>Hello World</h1>
-      </div>
+    <StudentInfo stdName = "Danyal Ahmed" stdAge = "21" stdProgram = "React" stdInstitute = "IMSciences" />
   );
 }
 
