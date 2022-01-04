@@ -5,7 +5,7 @@ import StudentInfo from './studentInfo';
 
 function App() {
   return (
-    <StudentInfo stdName = "Danyal Ahmed" stdAge = "21" stdProgram = "React" stdInstitute = "IMSciences" />
+    <StudentInfo stdName = "Danyal Ahmed" stdAge = "21" stdProgram = "MERN Stack" stdInstitute = "IMSciences" />
   );
 }
 
