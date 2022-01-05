@@ -25,6 +25,7 @@ function StudentInfo(props){
                 <h1>Color Mode : {modeTime ? 'Light Mode': 'Night Mode'}</h1>
                 <button onClick={()=> setModeTime(true)}>Light Mode</button>
                 <button onClick={()=> setModeTime(false)}>Night Mode</button>
+                <button onClick={()=> setModeTime(!modeTime)}>Change Mode</button>
 
             </center>
         </div>
