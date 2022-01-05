@@ -1,9 +1,14 @@
 import React from "react";
+import './App.css';
 import { useState } from 'react';
+
+
+
 function StudentInfo(props){
-    let [age, setAge] = useState(props.stdAge)
+    let [age, setAge] = useState(props.stdAge);
+    let [modeTime, setModeTime] = useState(false);
     return(
-        <div>
+        <div className={`${modeTime ? 'lightMode' : 'nightMode'}`}>
             <center>
                 <h1><underline> Student Details</underline> </h1>
                 <hr/>
@@ -15,6 +20,11 @@ function StudentInfo(props){
 
 
                 <h2>Institute Name: {props.stdInstitute}</h2>
+                <hr/>
+
+                <h1>Color Mode : {modeTime ? 'Light Mode': 'Night Mode'}</h1>
+                <button onClick={()=> setModeTime(true)}>Light Mode</button>
+                <button onClick={()=> setModeTime(false)}>Night Mode</button>
 
             </center>
         </div>
