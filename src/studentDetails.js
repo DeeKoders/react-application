@@ -1,17 +1,22 @@
 import React from "react";
+import InfoContext from './infoContext';
 import { useState } from "react";
 import StudentInfo from "./studentInfo";
 
-function StudentDetails (){
+function StudentDetails (props){
     let [modeTime, setModeTime] = useState(false);
+    var dict = {sname: props.stdName , age: props.stdAge, institute :  props.stdIns , prog : props.stdProg};
+
     return (
-        
+        <InfoContext.Provider value={dict}>
+
+
         <div className={`${modeTime ? 'lightMode' : 'nightMode'}`}>
             <center>
-                <h1><underline> Student Details</underline> </h1>
+                <h1><u> Student Details</u> </h1>
                 <hr/>
 
-                <StudentInfo stdName = "Danyal Ahmed" stdAge = {21} stdProgram = "MERN Stack" stdInstitute = "IMSciences" />
+                <StudentInfo/>
 
                 <hr/>
                 <h1>Color Mode : {modeTime ? 'Light Mode': 'Night Mode'}</h1>
@@ -21,6 +26,7 @@ function StudentDetails (){
 
             </center>
         </div>
+        </InfoContext.Provider>
     );
 
 }
