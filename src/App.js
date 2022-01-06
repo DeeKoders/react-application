@@ -1,12 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
-
-import StudentInfo from './studentInfo';
+import InfoContext from './infoContext';
+import StudentDetails from './studentDetails';
 
 
 function App() {
+  
   return (
-    <StudentInfo stdName = "Danyal Ahmed" stdAge = {21} stdProgram = "MERN Stack" stdInstitute = "IMSciences" />
+    <InfoContext.Provider value={21}>
+      <StudentDetails/>
+    </InfoContext.Provider>
   );
 }
 
