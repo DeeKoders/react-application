@@ -14,12 +14,10 @@ function StudentDetails (props){
         <div className={`${modeTime ? 'lightMode' : 'nightMode'}`}>
             <center>
                 <h1><u> Student Details</u> </h1>
-                <hr/>
 
                 <StudentInfo/>
 
-                <hr/>
-                <h1>Color Mode : {modeTime ? 'Light Mode': 'Night Mode'}</h1>
+                <h3>Color Mode : {modeTime ? 'Light Mode': 'Night Mode'}</h3>
                 <button onClick={()=> setModeTime(true)}>Light Mode</button>
                 <button onClick={()=> setModeTime(false)}>Night Mode</button>
                 <button onClick={()=> setModeTime(!modeTime)}>Change Mode</button>
